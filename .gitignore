@@ -1,0 +1,7 @@
+*~
+\#*\#
+*.elc
+auto-save-list
+tramp
+.\#*
+my-autoload.el
