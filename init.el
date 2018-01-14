@@ -47,9 +47,25 @@
 
 (setq use-package-always-ensure t)
 
+;;; end tip from gist
 
 
 
+;; now that core packages are installed via package.el (thanks to gist)
+;; we need to define some req-package clauses and then finish everything up
+;; with (req-package-finish)
+
+(req-package yaml-mode
+  :ensure t
+  :mode "\\.yml\\'")
+
+
+(req-package json-mode
+  :ensure t
+  :mode "\\.json\\'")
+
+
+(req-package-finish)
 
 
 ;;; this just magically appears, I guess
@@ -60,7 +76,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (req-package use-package el-get))))
+ '(package-selected-packages
+   (quote
+    (yaml-mode json-mode req-package use-package el-get))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
