@@ -5,3 +5,7 @@ auto-save-list
 tramp
 .\#*
 my-autoload.el
+
+elpa/
+
+init
