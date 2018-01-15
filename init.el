@@ -115,11 +115,42 @@
 
 
 
+;; ---  more customizations ---
+
+;; its nice to know the full title of the file you are working on.
+
+;; https://stackoverflow.com/a/3669681/710040
+;; show full file name in frame title bar
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+;; additionally, define a function which displays the current buffer's full path
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+(global-set-key (kbd "C-c i p") 'show-file-name)
 
 
 
+;; set up a way to quickly search the whole project,
+;;  combining find-file-in-project and counsel-ag
+(defun counsel-ag-project ()
+  "Search using counsel-ag from root of project"
+  (interactive)
+  (counsel-ag nil (ffip-get-project-root-directory)))
+(global-set-key (kbd "C-c p s") 'counsel-ag-project)
+
+(defun dired-project-root ()
+  "Open dired in project root"
+  (interactive)
+  (dired (ffip-get-project-root-directory)))
+(global-set-key (kbd "C-c p d") 'dired-project-root)
 
 
+
+;; -- custom set variables stuff --
 ;;; this just magically appears, I guess
 
 
