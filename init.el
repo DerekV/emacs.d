@@ -1,6 +1,12 @@
 ;; disable the ugly menu bar
 (tool-bar-mode -1)
 
+;; avoid using tabs for indentation, by default
+;; https://www.emacswiki.org/emacs/TabsAreEvil
+;; https://www.emacswiki.org/emacs/NoTabs
+(setq-default indent-tabs-mode nil)
+
+
 ;; load a nice dark theme as default
 (load-theme 'misterioso)
 
