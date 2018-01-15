@@ -1,8 +1,28 @@
 
 * .emacs.d
 
-My emacs dotfiles
-_A fresh start_
+My emacs dotfiles... 
+
+** A fresh start
+
+A 2018 do-over.  Here's [[https://github.com/DerekV/old-emacs.d][the old one]].
+
+** Overview
+
+See comments in [[./init.el][init]]
 
 * Useful refrences
-  - https://github.com/edvorg/emacs-configs
+  - https://gist.github.com/dustinlacewell-wk/fc998c56c61aceda12d8e095eab83759
+  - [[https://github.com/edvorg/emacs-configs][emacs-configs]] : good stuff to steal from
+  - [[https://github.com/bbatsov/prelude][prelude]] : which I am not using but contains some good stuff
+  
+
+* Random fun things
+** Emacs is old and crazy and amazing
+  - [[https://www.facebook.com/notes/daniel-colascione/buttery-smooth-emacs/10155313440066102/]]
+** Emacs pinky
+  - http://ergoemacs.org/emacs/emacs_kb_shortcuts_pain.html
+** Helm vs Ivy
+  - http://thescratchcastle.com/posts/emacs-and-helm.html
+  - https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/
+    
