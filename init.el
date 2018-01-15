@@ -98,7 +98,10 @@
 ;; https://github.com/technomancy/find-file-in-project
 (req-package find-file-in-project
   :ensure t
-  :require ivy)
+  :require ivy
+  :config
+  (global-set-key (kbd "C-c p o") 'find-file-in-project))
+  
 
 ;; https://github.com/purcell/exec-path-from-shell
 (req-package exec-path-from-shell
