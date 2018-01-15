@@ -117,6 +117,10 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode) ;; enable everwhere
   )
+
+(req-package magit
+  :ensure t)
+
  
 (req-package-finish)
 
@@ -168,7 +172,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
+    (magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
