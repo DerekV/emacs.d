@@ -87,6 +87,14 @@
   ;; I assume this just tweaks the output slightly
   (setq ivy-count-format "(%d/%d) "))
 
+;; https://github.com/technomancy/find-file-in-project
+(req-package find-file-in-project
+  :ensure t
+  :requires ivy)
+
+  
+  
+
 (req-package-finish)
 
 
@@ -106,7 +114,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ivy yaml-mode json-mode req-package use-package el-get)))
+    (find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
