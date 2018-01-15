@@ -100,6 +100,12 @@
   :ensure t
   :require ivy)
 
+;; https://github.com/purcell/exec-path-from-shell
+(req-package exec-path-from-shell
+  :ensure t
+  :config
+  (when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize)))
 
 
 (req-package-finish)
@@ -121,7 +127,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (console swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
+    (exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

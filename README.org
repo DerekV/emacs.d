@@ -26,4 +26,8 @@ See comments in [[./init.el][init]]
   - http://thescratchcastle.com/posts/emacs-and-helm.html
   - https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/
   - http://oremacs.com/swiper/
-  
+
+
+* Stuff I do a lot
+** Find/replace in project
+   https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
