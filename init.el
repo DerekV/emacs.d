@@ -4,6 +4,11 @@
 ;; load a nice dark theme as default
 (load-theme 'misterioso)
 
+;; show matching braces/parans
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
+
 ;; auto-save on loss of focus
 (defun save-all ()
   (interactive)
@@ -64,8 +69,25 @@
   :ensure t
   :mode "\\.json\\'")
 
+;; http://oremacs.com/swiper/  
+(req-package ivy
+  :ensure t
+  :config
+  ;; turns ivy on eveywhere
+  (ivy-mode 1)
+  ;; these next two are "suggested minimal customizations"
+  ;; virtual buffers remembers files you opened in the past and shows them when you switch buffers
+  (setq ivy-use-virtual-buffers t)
+  ;; I assume this just tweaks the output slightly
+  (setq ivy-count-format "(%d/%d) "))
 
 (req-package-finish)
+
+
+
+
+
+
 
 
 ;;; this just magically appears, I guess
@@ -78,7 +100,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yaml-mode json-mode req-package use-package el-get))))
+    (ivy yaml-mode json-mode req-package use-package el-get)))
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
