@@ -107,7 +107,10 @@
   (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize)))
 
-
+;; https://github.com/mhayashi1120/Emacs-wgrep
+(req-package wgrep
+  :ensure t)
+ 
 (req-package-finish)
 
 
@@ -127,7 +130,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
+    (wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

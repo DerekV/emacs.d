@@ -30,4 +30,8 @@ See comments in [[./init.el][init]]
 
 * Stuff I do a lot
 ** Find/replace in project
-   https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
+*** Counsel-ag
+  
+   - https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
+   - http://irreal.org/blog/?p=6008
+
