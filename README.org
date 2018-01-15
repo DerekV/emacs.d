@@ -11,9 +11,9 @@ A 2018 do-over.  Here's [[https://github.com/DerekV/old-emacs.d][the old one]].
 
 See comments in [[./init.el][init]]
 
-* Useful refrences
+* Useful references
   - https://gist.github.com/dustinlacewell-wk/fc998c56c61aceda12d8e095eab83759
-  - [[https://github.com/edvorg/emacs-configs][emacs-configs]] : good stuff to steal from
+  - [[https://github.com/edvorg/emacs-configs][emacs-configs]] : good stuff
   - [[https://github.com/bbatsov/prelude][prelude]] : which I am not using but contains some good stuff
   
 
@@ -25,4 +25,5 @@ See comments in [[./init.el][init]]
 ** Helm vs Ivy
   - http://thescratchcastle.com/posts/emacs-and-helm.html
   - https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/
-    
+  - http://oremacs.com/swiper/
+  
