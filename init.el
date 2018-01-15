@@ -133,7 +133,7 @@
 
 ;; its nice to know the full title of the file you are working on.
 
-;; https://stackoverflow.com/a/3669681/710040
+;; https://stackoverflow.com/a/3669681#366951
 ;; show full file name in frame title bar
 (setq frame-title-format
       (list (format "%s %%S: %%j " (system-name))
@@ -185,7 +185,17 @@
 (global-set-key (kbd "M-S-<down>")  'move-line-down)
 (global-set-key (kbd "M-S-<up>")  'move-line-up)
 
-
+;; mimic intellij duplicate line
+;; https://stackoverflow.com/questions/88399#88828
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+(global-set-key (kbd "s-d") 'duplicate-line)
 
 ;; -- custom set variables stuff --
 ;;; this just magically appears, I guess
