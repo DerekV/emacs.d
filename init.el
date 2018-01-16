@@ -94,7 +94,7 @@
   :ensure t
   :require ivy
   :config
-  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+  ;; some key combinations / overrides, more suggestions xin ivy manual (C-h i g ivy)
   (global-set-key (kbd "C-s") 'swiper))
 
 (req-package counsel
@@ -134,6 +134,9 @@
 (req-package magit
   :ensure t)
 
+
+(req-package terraform-mode
+  :ensure t)
  
 (req-package-finish)
 
@@ -219,7 +222,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
+    (terraform-mode magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
