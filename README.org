@@ -35,3 +35,22 @@ See comments in [[./init.el][init]]
    - https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
    - http://irreal.org/blog/?p=6008
 
+
+
+* TODOS
+  Deffered modifications, ideas, customizations-of-interest
+** Highlight TODOs
+   - [[https://www.emacswiki.org/emacs/fixme-mode.el][FIXME mode]]
+   - [[hl-todo][highlight todo mode]]
+   - maybe just steal some code from above rather than bringing in a new mode?
+** Set up flycheck
+** Set up common programming environments:
+*** Python
+*** Haskell
+*** Go-lang
+*** Lisp
+*** Clojure
+*** Prolog
+*** Rust
+
+      
