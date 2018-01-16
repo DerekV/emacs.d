@@ -85,15 +85,25 @@
   ;; virtual buffers remembers files you opened in the past and shows them when you switch buffers
   (setq ivy-use-virtual-buffers t)
   ;; I assume this just tweaks the output slightly
-  (setq ivy-count-format "(%d/%d) "))
+  (setq ivy-count-format "(%d/%d) ")
+  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+  (global-set-key (kbd "C-c C-r") 'ivy-resume)
+  )
 
 (req-package swiper
   :ensure t
-  :require ivy)
+  :require ivy
+  :config
+  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+  (global-set-key (kbd "C-s") 'swiper))
 
 (req-package counsel
   :ensure t
-  :require ivy swiper)
+  :require ivy swiper
+  :config
+  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file))
 
 ;; https://github.com/technomancy/find-file-in-project
 (req-package find-file-in-project
@@ -195,6 +205,7 @@
   (open-line 1)
   (next-line 1)
   (yank))
+(global-set-key (kbd "s-d") 'duplicate-line)
 (global-set-key (kbd "s-d") 'duplicate-line)
 
 ;; -- custom set variables stuff --
