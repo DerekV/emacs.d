@@ -137,7 +137,15 @@
 
 (req-package terraform-mode
   :ensure t)
- 
+
+(req-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
 (req-package-finish)
 
 
@@ -222,7 +230,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (terraform-mode magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
+    (markdown-mode markdown terraform-mode magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
