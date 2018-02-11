@@ -150,6 +150,15 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+(req-package rust-mode
+  :ensure t
+  :mode (("\\.rs\\'" . rust-mode)))
+
+;; https://github.com/dryman/toml-mode.el/issues/14
+;; (req-package toml-mode
+;;   :ensure t
+;;   :mode (("\\.toml\\'" . toml-mode)))
+
 (req-package-finish)
 
 
