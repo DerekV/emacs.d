@@ -9,3 +9,7 @@ my-autoload.el
 elpa/
 
 initfoo
+
+session.*
+transient/*
+/recentf
