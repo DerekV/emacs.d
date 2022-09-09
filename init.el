@@ -241,7 +241,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(markdown-mode markdown terraform-mode magit company wgrep exec-path-from-shell find-file-in-project yaml-mode json-mode req-package use-package el-get))
+   '(markdown-mode markdown magit company wgrep exec-path-from-shell find-file-in-project yaml-mode json-mode req-package use-package el-get))
  '(show-paren-mode t)
  '(warning-suppress-types '((auto-save) (auto-save) (auto-save))))
 (custom-set-faces
@@ -269,3 +269,4 @@
       auto-save-timeout 30              ; number of seconds idle time before auto-save (default: 30)
       auto-save-interval 300            ; number of keystrokes between auto-saves (default: 300)
       )
+
