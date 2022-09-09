@@ -76,34 +76,34 @@
   :mode "\\.json\\'")
 
 ;; http://oremacs.com/swiper/  
-(req-package ivy
-  :ensure t
-  :config
-  ;; turns ivy on eveywhere
-  (ivy-mode 1)
-  ;; these next two are "suggested minimal customizations"
-  ;; virtual buffers remembers files you opened in the past and shows them when you switch buffers
-  (setq ivy-use-virtual-buffers t)
-  ;; I assume this just tweaks the output slightly
-  (setq ivy-count-format "(%d/%d) ")
-  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
-  (global-set-key (kbd "C-c C-r") 'ivy-resume)
-  )
+;; (req-package ivy
+;;   :ensure t
+;;   :config
+;;   ;; turns ivy on eveywhere
+;;   (ivy-mode 1)
+;;   ;; these next two are "suggested minimal customizations"
+;;   ;; virtual buffers remembers files you opened in the past and shows them when you switch buffers
+;;   (setq ivy-use-virtual-buffers t)
+;;   ;; I assume this just tweaks the output slightly
+;;   (setq ivy-count-format "(%d/%d) ")
+;;   ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+;;   (global-set-key (kbd "C-c C-r") 'ivy-resume)
+;;   )
 
-(req-package swiper
-  :ensure t
-  :require ivy
-  :config
-  ;; some key combinations / overrides, more suggestions xin ivy manual (C-h i g ivy)
-  (global-set-key (kbd "C-s") 'swiper))
+;; (req-package swiper
+;;   :ensure t
+;;   :require ivy
+;;   :config
+;;   ;; some key combinations / overrides, more suggestions xin ivy manual (C-h i g ivy)
+;;   (global-set-key (kbd "C-s") 'swiper))
 
-(req-package counsel
-  :ensure t
-  :require ivy swiper
-  :config
-  ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
-  (global-set-key (kbd "M-x") 'counsel-M-x)
-  (global-set-key (kbd "C-x C-f") 'counsel-find-file))
+;; (req-package counsel
+;;   :ensure t
+;;   :require ivy swiper
+;;   :config
+;;   ;; some key combinations / overrides, more suggestions in ivy manual (C-h i g ivy)
+;;   (global-set-key (kbd "M-x") 'counsel-M-x)
+;;   (global-set-key (kbd "C-x C-f") 'counsel-find-file))
 
 ;; https://github.com/technomancy/find-file-in-project
 (req-package find-file-in-project
@@ -130,7 +130,6 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode) ;; enable everwhere
   )
-
 (req-package magit
   :ensure t)
 
@@ -242,9 +241,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (markdown-mode markdown terraform-mode magit company wgrep exec-path-from-shell counsel swiper find-file-in-project ivy yaml-mode json-mode req-package use-package el-get)))
- '(show-paren-mode t))
+   '(markdown-mode markdown terraform-mode magit company wgrep exec-path-from-shell find-file-in-project yaml-mode json-mode req-package use-package el-get))
+ '(show-paren-mode t)
+ '(warning-suppress-types '((auto-save) (auto-save) (auto-save))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
